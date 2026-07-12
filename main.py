@@ -9,12 +9,183 @@ print()
 if os.path.isdir(folder_path):
     print('✔ Folder Found')
     print()
-    print(folder_path)
+    print('Files Found:')
     print()
+
     items = os.listdir(folder_path)
+    FILE_TYPES= { 
+    
+        ".jpg": "Images",
+        ".jpeg": "Images",
+        ".png": "Images",
+
+        ".mp4": "Videos",
+        ".mkv": "Videos",
+
+        ".mp3": "Music",
+
+        ".pdf": "Documents",
+        ".docx": "Documents",
+        ".txt": "Documents", 
+
+        ".py" : "Python"
+
+
+    }
     for item in items:
-        print(item)
+        full_path= os.path.join(folder_path , item)
+
+
+        if os.path.isfile(full_path):
+            
+            file_name, extension = os.path.splitext(item)
+            category = FILE_TYPES.get(extension, 'Others')
+            print(item, '----->', category)
+
+
+
+    
+
 else:
     print('❌ Invalid Folder Path')
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
