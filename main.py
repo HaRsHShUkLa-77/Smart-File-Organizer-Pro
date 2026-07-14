@@ -53,11 +53,7 @@ else:
 
 
 
-#isko krlo phele maam
-git status
-git add .
-git commit -m "Completed Milestone 6 - Created category folders"
-git push
+
 
 
 
