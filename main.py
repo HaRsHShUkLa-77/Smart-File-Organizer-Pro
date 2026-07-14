@@ -40,6 +40,8 @@ if os.path.isdir(folder_path):
             
             file_name, extension = os.path.splitext(item)
             category = FILE_TYPES.get(extension, 'Others')
+            category_folder = os.path.join(folder_path, category)
+            os.makedirs(category_folder, exist_ok= True)
             print(item, '----->', category)
 
 
@@ -51,8 +53,11 @@ else:
 
 
 
-
-
+#isko krlo phele maam
+git status
+git add .
+git commit -m "Completed Milestone 6 - Created category folders"
+git push
 
 
 
